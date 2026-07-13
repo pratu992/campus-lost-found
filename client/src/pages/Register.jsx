@@ -68,7 +68,7 @@ function Register() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://campus-lost-found-244q.onrender.com/api/auth/register",
         {
           fullName: formData.fullName,
           usn: formData.usn,

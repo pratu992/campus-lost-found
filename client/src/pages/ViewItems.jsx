@@ -29,7 +29,7 @@ const ViewItems = () => {
 
   const fetchItems = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/items");
+      const res = await axios.get("https://campus-lost-found-244q.onrender.com/api/items");
       setItems(res.data);
     } catch (err) {
       console.error(err);
@@ -38,7 +38,7 @@ const ViewItems = () => {
 
   const markReturned = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/items/${id}/return`);
+      await axios.put(`https://campus-lost-found-244q.onrender.com/api/items/${id}/return`);
       fetchItems();
     } catch (err) {
       console.error(err);
@@ -54,7 +54,7 @@ const ViewItems = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/items/${id}`);
+      await axios.delete(`https://campus-lost-found-244q.onrender.com/api/items/${id}`);
       fetchItems();
     } catch (err) {
       console.error(err);

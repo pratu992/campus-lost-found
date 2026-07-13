@@ -96,7 +96,7 @@ const EditItemModal = ({
       setLoading(true);
 
       await axios.put(
-        `http://localhost:5000/api/items/${item._id}`,
+        `https://campus-lost-found-244q.onrender.com/api/items/${item._id}`,
         formData
       );
 
